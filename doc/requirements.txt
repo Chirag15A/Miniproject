@@ -1,0 +1,18 @@
+System requirements:
+Windows operating system 64-bit
+
+Language:
+Python (For backend and front-end)
+
+Software / IDLE :
+VS CODE
+
+Python Libraries:
+
+
+Checkers game requirements:
+
+-> The game should consist of 8X8 checkerboard with alernating light and dark colored squares.
+-> There should be 12 light and 12 dark colored checkers.
+-> The pieces should be placed on the dark colored checkers.
+-> The checkers should be allowed to be dragged to any unoccupied dark square.
