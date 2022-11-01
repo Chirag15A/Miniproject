@@ -38,9 +38,8 @@ Out project include the following aspects:
 PROPOSED LIBRARIES TO BE USED IN THE PROJECT:
 1.	NumPy
 2.	Pygame
-3.	Random
-4.	Sys
-5.	Combinations
+3.	Sys
+4.	Combinations
 (Further, some of them may not be used or some more may be added based on the requirements made.)
 FURTHUR EXTENSIONS TO THE PROJECT:
 The major improvements to be done in the projects:
