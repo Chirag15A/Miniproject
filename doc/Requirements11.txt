@@ -1,7 +1,7 @@
 Checkers Game:
 Checkers is a traditional board game played between two people. The board is made up of 64 dark and light squares, with 32 Black and White game pieces for gameplay. 
 Checkers, also called draughts, board game, one of the world’s oldest games. Checkers is played by two persons who oppose each other across a board of 64 light and dark squares, the same as a chessboard. 
-The 24 playing pieces are disk-shaped and of contrasting colours (whatever their colours, they are identified as black and white). 
+The 32 playing pieces are disk-shaped and of contrasting colours (whatever their colours, they are identified as black and white). 
 At the start of the game, each contestant has 12 pieces arranged on the board. 
 While the actual playing is always done on the dark squares, the board is often shown in reverse for clarity. 
 The notation used in describing the game is based on numbering the squares on the board. 
