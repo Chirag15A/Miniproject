@@ -14,6 +14,7 @@ class Tale:
         self._isplayable = isplayable
         self.checker = None
         self._isvisible = False
+        #load the token image according to select 
         if self._iswhite:
             self.image = pygame.image.load("LightTale.png")        #load light colour image
         else:
@@ -24,8 +25,13 @@ class Tale:
         self.ishighlighted = False
         self.highlightsurface = pygame.Surface((40, 40))
         self.highlightsurface.fill(self.color)
+<<<<<<< HEAD
         self.highlightsurface.set_alpha(0)                         # set opacity of highlighter to 0
 #//////////////////////////////////////////////
+=======
+        self.highlightsurface.set_alpha(0)
+#function to update the screen after one player turn 
+>>>>>>> ab624d6d1b9559ad7a222291652aa715479aba0c
     def update(self):
         if self._isplayable:
             if self._isvisible:
