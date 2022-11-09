@@ -24,7 +24,7 @@ class Checker:
         else:
             self.image = pygame.image.load("Black.png")
         self.rect = self.image.get_rect(topleft=(self.x * 40, self.y * 40))
-        self.image.set_alpha(255)
+        self.image.set_alpha(255)#alpha value 255 means that it will be fully opaque
         self.playabletales = []
         self.isbeating = False
         self.isdamka = False

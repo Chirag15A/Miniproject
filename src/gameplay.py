@@ -1,6 +1,8 @@
 import pygame
 import math
 
+
+
 FPS = 60
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
@@ -41,7 +43,7 @@ class Tale:
         self.highlightsurface = pygame.Surface((40, 40))
         self.highlightsurface.fill(self.color)
         self.highlightsurface.set_alpha(0)
-
+#//////////////////////////////////////////////
     def update(self):
         if self._isplayable:
             if self._isvisible:
@@ -58,7 +60,7 @@ class Tale:
             self.highlightsurface.set_alpha(0)
         screen.blit(self.image, self.rect)
         screen.blit(self.highlightsurface, (self.x * 40, self.y * 40))
-
+#///////////////////////////////////////
     def show(self):
         self._isvisible = True
 
@@ -93,7 +95,7 @@ class Tale:
             return True
         else:
             return False
-
+#////////////////////////////////////
 class Checker:
     def __init__(self, iswhite, tale):
         self._iswhite = iswhite

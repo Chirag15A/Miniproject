@@ -2,7 +2,7 @@ import pygame
 import math
 import main
 
-#//defining the variabales that are to be used in the class
+
 
 
 

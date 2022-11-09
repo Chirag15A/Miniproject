@@ -60,7 +60,7 @@ clock = pygame.time.Clock()
 for i in range(1, 5):
     for j in range(6, 9):
         if j % 2 == 1:
-            newwhitechecker = Checkerc(True, tales[2 * i][j])
+            newwhitechecker = Checkerc.Checker(True, tales[2 * i][j])
         else:
             newwhitechecker = Checkerc(True, tales[2 * i - 1][j])
         whites.append(newwhitechecker)
