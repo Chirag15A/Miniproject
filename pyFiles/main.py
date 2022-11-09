@@ -1,3 +1,4 @@
+#import needed lib and files 
 import pygame
 import math
 import Checkerc
@@ -145,7 +146,7 @@ while running1:
     elif len(blacks) == 0:
         whitewins = True
         running1 = False
-
+# To display the winner 
 if whitewins:
     print("Congratulations Player1!")
 else:
