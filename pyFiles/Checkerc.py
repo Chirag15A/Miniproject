@@ -20,9 +20,9 @@ class Checker:
         self.highlightsurface.fill(self.color)
         self.highlightsurface.set_alpha(0)
         if self._iswhite:
-            self.image = pygame.image.load("White.png")
+            self.image = pygame.image.load("White.png")             # load white token
         else:
-            self.image = pygame.image.load("Black.png")
+            self.image = pygame.image.load("Black.png")             # load black token
         self.rect = self.image.get_rect(topleft=(self.x * 40, self.y * 40))
         self.image.set_alpha(255)
         self.playabletales = []
@@ -70,10 +70,10 @@ class Checker:
             path = []
             x = st.x
             y = st.y
-            maximumne = 6
-            maximumse = 6
-            maximumnw = 6
-            maximumsw = 6
+            maximumne = 6          # North-East direction
+            maximumse = 6          # South-East direction
+            maximumnw = 6          # North-West direction
+            maximumsw = 6          # South-West direction
             for k in range(1, 7):
                 for i in [-k, +k]:
                     for j in [-k, +k]:
@@ -158,7 +158,7 @@ class Checker:
         self.y = self.tale.y
         self.rect = self.image.get_rect(topleft=(self.x * 40, self.y * 40))
 
-    def bebeaten(self):
+    def bebeaten(self):              # capturing
         global whites
         global blacks
         if self._iswhite:
@@ -179,7 +179,7 @@ class Checker:
         self.isplayable = False
         self.hide()
 
-    def beat(self, beaten_checker):
+    def beat(self, beaten_checker):          
         deltax, deltay = beaten_checker.x - self.x, beaten_checker.y - self.y
         self.move(main.tales[int(self.x + (abs(deltax) + 1) * deltax / abs(deltax))][
                       int(self.y + (abs(deltay) + 1) * deltay / abs(deltay))])
@@ -244,7 +244,7 @@ class Checker:
                             whitesturn = not whitesturn
 
 
-    def maybebecomedamka(self):
+    def maybebecomedamka(self):                 # shows who will be the king
         if (self.tale.y == 1 and self._iswhite) or (self.tale.y == 8 and not self._iswhite):
             self.isdamka = True
             if self._iswhite:
