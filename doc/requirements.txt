@@ -45,3 +45,7 @@ FURTHUR EXTENSIONS TO THE PROJECT:
 The major improvements to be done in the projects:
 1.	Addition of network system to game: Using server client connections, we may further extend this project to multi-system game. This will help people to play game in online mode with people on different systems.
 2.	Chatbot: This is the second improvement that we have decided to make further, as it will make people feel that they are really playing games in real – time mode
+
+
+Extension by sir:
+Reading the load game from others' file
