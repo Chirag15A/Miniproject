@@ -1,0 +1,47 @@
+Checkers Game:
+Checkers is a traditional board game played between two people. The board is made up of 64 dark and light squares, with 24 Black and White game pieces for gameplay. 
+Checkers, also called draughts, board game, one of the world’s oldest games. Checkers is played by two persons who oppose each other across a board of 64 light and dark squares, the same as a chessboard. 
+The 32 playing pieces are disk-shaped and of contrasting colours (whatever their colours, they are identified as black and white). 
+At the start of the game, each contestant has 12 pieces arranged on the board. 
+While the actual playing is always done on the dark squares, the board is often shown in reverse for clarity. 
+The notation used in describing the game is based on numbering the squares on the board. 
+The black pieces always occupy squares 1 to 12, and the white pieces invariably rest on squares 21 to 32.
+
+OBJECTIVES:
+The game’s main objective is to capture every opponent’s piece.
+
+MOVING:
+1.	Moves are always diagonal, towards the opponent, and via dark squares only.
+2.	You can only jump one square at a time unless capturing a piece, in which case two squares will be jumped.
+3.	You cannot jump over two consecutively positioned pieces.
+4.	Players will alternate turns to move.
+
+
+
+CAPTURING:
+1.	You may only capture one piece per jump.
+2.	If a single capture is available, it must be taken.
+3.	If multiple captures are available, the player can decide which one to take, but still, a capture must be taken.
+4.	Captured pieces are eliminated from the board.
+
+CROWNING A KING:
+A piece reaching the furthest row from the player in control is crowned king by placing on a captured piece on top of that piece, doubling its height. 
+Pieces crowned king can move backward and forward, but only in a diagonal direction.
+
+WHAT OUR PROJECT INCLUDE:
+Out project include the following aspects:
+1.	We are planning to design a game in which 2 users can play checkers on their laptops and computer systems.
+2.	This will take the help of computer OS in detecting a valid move. It will make sure that user will move only in the diagonal direction.
+3.	At last, based on the pieces on the board, computer will detect about the winner and will declare the user as king.
+4.	At most, it will have the facility that if you are playing some last game, it will be kept saved in your respective systems.
+
+PROPOSED LIBRARIES TO BE USED IN THE PROJECT:
+1.	NumPy
+2.	Pygame
+3.	Sys
+4.	Combinations
+(Further, some of them may not be used or some more may be added based on the requirements made.)
+FURTHUR EXTENSIONS TO THE PROJECT:
+The major improvements to be done in the projects:
+1.	Addition of network system to game: Using server client connections, we may further extend this project to multi-system game. This will help people to play game in online mode with people on different systems.
+2.	Chatbot: This is the second improvement that we have decided to make further, as it will make people feel that they are really playing games in real – time mode
