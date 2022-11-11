@@ -537,11 +537,11 @@ class Board(Tk):
             elif self.current_player == 1 and self.mode == 1:
                 self.end_time = time()
                 add_high_score(self.player2_name, self.board_size, self.start_time, self.end_time)
-                self.enter_text_for_user("Congratulations!\n" + self.player2_name + " wins!")
+                self.enter_text_for_user("Congratulations!\n" + self.player2_name + " wins! :_:")
             elif self.current_player == 2 and (self.mode == 1 or self.mode == 2):
                 self.end_time = time()
                 add_high_score(self.player1_name, self.board_size, self.start_time, self.end_time)
-                self.enter_text_for_user("Congratulations!\n" + self.player1_name + " wins!")
+                self.enter_text_for_user("Congratulations!\n" + self.player1_name + " wins! :_:")
             self.game_over = True
             self.print_current_board()
             return True
