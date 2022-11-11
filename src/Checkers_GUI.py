@@ -13,13 +13,13 @@ class Menu(Frame):
         self.menuFrame.pack(expand=1, fill=BOTH, side=TOP)
         self.menuFrame.pack_propagate(0)
         self.button1 = Button(self.menuFrame, text="Play!", font=("Helvetica", "15", "bold"), width=13, height=2,
-                              command=board.start_game, cursor="heart", relief=RIDGE, bg = "red")
+                              command=board.start_game, cursor="heart", relief=RIDGE, bg = "grey")
         self.button1.pack()
         self.button2 = Button(self.menuFrame, text="Settings", font=("Helvetica", "15", "bold"), width=13, height=2,
                               command=board.show_settings, relief=RIDGE,bg = "black", fg="white")
         self.button2.pack()
         self.button3 = Button(self.menuFrame, text="Highscore", font=("Helvetica", "15", "bold"), width=13, height=2,
-                              command=board.show_high_score, relief=RIDGE,bg = "red")
+                              command=board.show_high_score, relief=RIDGE,bg = "grey")
         self.button3.pack()
         self.button4 = Button(self.menuFrame, text="Exit", font=("Helvetica", "15", "bold"), width=13, height=2,
                               command=board.game_exit, cursor="pirate", relief=RIDGE,bg = "black", fg="white")
@@ -47,20 +47,20 @@ class Board(Tk):
     ''' A class for creating the board, the high score box and the instructions text box and their associated methods.
     '''
 
-    def __init__(self, width=1100, height=800, cell_size=90):
+    def __init__(self, width=800, height=700, cell_size=90):
         Tk.__init__(self)
         self.cell_size = cell_size
         self.canvas = Canvas(self, width=width, height=height,)
-        self.canvas.pack(expand=1, side=RIGHT)
+        self.canvas.pack(expand=1, side=LEFT)
 
         self.textFrame = Frame(width=400, height=20)
-        self.textFrame.pack(expand=1, fill=BOTH, side=RIGHT)
-        self.textForUser = Text(self.textFrame, width=20, height=4, bg="red", font=("Times new Roman", "15"), wrap=WORD)
+        self.textFrame.pack(expand=1, fill=BOTH, side=BOTTOM)
+        self.textForUser = Text(self.textFrame, width=20, height=4, bd=4, bg="grey", font=("Times new Roman", "30"), wrap=WORD)
         self.textForUser.pack()
-        self.textForUser.insert(END, "Welcome to checkers!")
+        self.textForUser.insert(END, "Welcome to checkers!\n"+"Start the Game :_:")
         self.textForUser.config(state=DISABLED)
 
-        self.highScoreText = Text(self.textFrame, width=20, height=30, bg="white smoke", font=("Times new Roman", "15"), wrap=WORD)
+        self.highScoreText = Text(self.textFrame, width=20, height=30, bg="white smoke", font=("Times new Roman", "25"), wrap=WORD)
 
         self.player1_name = "Player 1"
         self.player2_name = "Player 2"
@@ -133,7 +133,7 @@ class Board(Tk):
             self.color1 = "white smoke"
             self.color2 = "black"
         elif menu.piece_color.get() == 4:
-            self.color1 = "blue"
+            self.color1 = "black"
             self.color2 = "red"
         if menu.board_size_.get() == 8 or menu.board_size_.get() == 10:
             self.board_size = menu.board_size_.get()
@@ -175,8 +175,7 @@ class Board(Tk):
                 for lists in score_list:
                     if lists[1] == "8x8":
                         time_list_8.append([lists[2], lists[0], lists[1]])
-                    elif lists[1] == "10x10":
-                        time_list_10.append([lists[2], lists[0], lists[1]])
+                    
                         
         if len(score_list) > 0:
             time_list_8.sort()
@@ -196,12 +195,12 @@ class Board(Tk):
                 if time_list_8[times][2] == "8x8":
                     self.highScoreText.insert(END, "%d min %02d s  " % (m, s) + " " + time_list_8[times][1] + "\n")
 
-            self.highScoreText.insert(END, "\n10x10\n", "e")
-            self.highScoreText.tag_configure("e", underline=1)
-            for times in range(len(time_list_10)):
-                m, s = divmod(int(time_list_10[times][0]), 60)
-                if time_list_10[times][2] == "10x10":
-                    self.highScoreText.insert(END, "%d min %02d s  " % (m, s) + " " + time_list_10[times][1] + "\n")
+            # self.highScoreText.insert(END, "\n10x10\n", "e")
+            # self.highScoreText.tag_configure("e", underline=1)
+            # for times in range(len(time_list_10)):
+            #     m, s = divmod(int(time_list_10[times][0]), 60)
+            #     if time_list_10[times][2] == "10x10":
+            #         self.highScoreText.insert(END, "%d min %02d s  " % (m, s) + " " + time_list_10[times][1] + "\n")
 
         self.highScoreText.config(state=DISABLED)
         return
@@ -635,7 +634,7 @@ class Board(Tk):
             y1 = (j * self.cell_size)
             x2 = x1 + self.cell_size
             y2 = y1 + self.cell_size
-            color = "white" if i % 2 == j % 2 else "brown"
+            color = "grey" if i % 2 == j % 2 else "white"
             squares = self.canvas.create_rectangle(x1, y1, x2, y2, fill=color, outline="bisque4")
             self.canvas.tag_bind(squares, "<ButtonPress-1>", self.on_click_square)
         return
@@ -778,7 +777,7 @@ def instruct():
     label.place(x = 0, y = 350)
     label = Label(Frame2, text = "A player wins the game when the opponent cannot make a move. ", font=("Arial", 25))
     label.place(x = 0, y = 400)
-    label = Label(Frame2, text = "The first player to remove all twelve of his pieces after each reaches his home space is the winner!", font=("Arial", 25))
+    label = Label(Frame2, text = "The first player to remove all twelve of his pieces after each reaches his home space is the winner!", font=("Arial", 30))
     label.place(x = 0, y = 500)
     button3 = Button(Frame2,text="< < < Back > > >",height= 5, width=20, bg = "red", command = Frame2.destroy)
     button3.place(x = 700, y = 650)
