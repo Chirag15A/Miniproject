@@ -47,7 +47,7 @@ class Board(Tk):
     ''' A class for creating the board, the high score box and the instructions text box and their associated methods.
     '''
 
-    def __init__(self, width=800, height=700, cell_size=90):
+    def __init__(self, width=800, height=800, cell_size=90):
         Tk.__init__(self)
         self.cell_size = cell_size
         self.canvas = Canvas(self, width=width, height=height,)
